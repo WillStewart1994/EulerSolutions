@@ -20,8 +20,6 @@ source2 = string.split('\n')
 for line in source2:
     grid.append(line.lstrip().split(' '))
 
-print(grid[14][1])
-
 for i in range(len(grid)-2, -1, -1):
     for j in range(0, len(grid[i])):
         grid[i][j] = int(grid[i][j]) + int(max(grid[i+1][j], grid[i+1][max(j+1, 0)]))
